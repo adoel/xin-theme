@@ -17,5 +17,7 @@ div.img-user {width: 60px;height: 60px;display: block;border-radius: 50%;margin:
 .xin-drawer ul.list-drawer li i {padding: 0;float: right;font-style: inherit;max-width: 21px;width: 21px;text-align: center;font-size: 0.9em;color: #fff;background-color: #aaa;border-radius: 50%;display: table;}
 /*end drawer*/
 /*heade*/
-.navbar {padding: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.16); background-color: inherit}
+.navbar {padding: 11px; box-shadow: 0 1px 3px rgba(0,0,0,0.16); background-color: inherit}
+.navbar .back-button {float: left; width: 56px;}
+.navbar h6.label {text-align: inherit}
 /*end heade*/
