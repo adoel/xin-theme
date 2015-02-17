@@ -28,6 +28,16 @@ div.img-user {width: 60px;height: 60px;display: block;border-radius: 50%;margin:
 input[type="file"], input[type="submit"], input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea, select, span.field {margin-bottom: 10px}
 /*end form*/
 
+/*intro*/
+.intro div[data-region="footer"] {position: absolute; bottom: 0; left: 0; right: 0}
+.intro .descIntro {padding: 20px 0}
+.intro div[data-region="footer"] .span-2 a {text-align: center; padding: 10px; display: inherit}
+.intro div[data-region="footer"] .span-8 { padding: 10px}
+.intro div[data-region="footer"] ul {display: table; margin: 0 auto}
+.intro div[data-region="footer"] ul li {  list-style:none; display: list-item; height: 5px; width: 5px; border: 1px solid #08c; float: left; border-radius: 50%; margin: 6px;}
+.intro div[data-region="footer"] ul li.active {background-color: #08c}
+/*end intro*/
+
 /*login*/
 div[data-uri="signup"] {background: url(../img/consolidated_wealth.jpg) center; background-size: cover;}
 div[data-uri="login"] {display: table !important; background: url(../img/consolidated_wealth.jpg) center; background-size: cover;}
