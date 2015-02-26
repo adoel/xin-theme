@@ -1,6 +1,6 @@
 /*body*/
 .hide {display: none !important}
-[data-region="body"] {padding: 0 20px}
+[data-region="body"] {padding: 0 16px}
 .noWrap {white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
 /*end body*/
 
@@ -103,3 +103,17 @@ a.login {display: table; margin: 0 auto}
 #signup input.inputFirst {border-radius: 5px 5px 0 0; -webkit-border-radius: 5px 5px 0 0; -o-border-radius: 5px 5px 0 0; -ms-border-radius: 5px 5px 0 0; }
 #signup input[type="submit"] {margin: 10px auto; font-size: 16px;}
 /*end register page*/
+
+/*tabstrip*/
+.tabstrip .tabs {padding:10px 0}
+/*end tabstrip*/
+
+/*list View*/
+ul.listing .thumb-img {width: 46px;height: 46px;background-size: cover;background-repeat: no-repeat;float: left;background-position: center;border-radius: 50%;margin-right: 16px;}
+ul.listing li {list-style: none; clear: both; padding: 16px 0;}
+ul.listing li .title {margin: 0; font-size: 1em}
+/*end list View*/
+
+/*title*/
+h1.titleHead {font-size: 1.1em;padding: 13px 0;margin: 0;}
+/*title*/
