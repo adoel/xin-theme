@@ -12,22 +12,22 @@ p {color: rgba(0, 0, 0, 0.71)}
 /*drawer*/
 .xin-drawer {border: 0; box-shadow: 0 1px 1px #ddd;}
 .xin-drawer [data-region="body"] {margin-top: 0; padding: 0}
-.box-user {margin-bottom: 8px; box-shadow: 0 1px 1px #ddd; background-color: #f7fafd}
+.box-user {box-shadow: 0 1px 1px #ddd; background-color: #f7fafd}
 div.img-user {width: 60px;height: 60px;display: block;border-radius: 50%;margin: 16px; background: url(../img/2014-01-28.jpg); background-size: cover; background-position: center; background-repeat: no-repeat}
 .name-user {padding: 16px; color: #575a5e;}
 .name-user i {float: right}
 .xin-drawer .xin-list li {border-top: 0; list-style: none; padding: 13px 16px}
 .xin-drawer .xin-list li a {line-height: 170%;padding: 0; color: #575a5e}
-.xin-drawer .xin-list li i {float: left; padding-right: 44px;font-size: 1.5em;color: #737373;}
-.menu-drawer {border-bottom: 1px solid #eee; padding-bottom: 8px}
+.xin-drawer .xin-list li i {float: left; margin-right: 40px;font-size: 1.5em;color: #737373; width: 26px}
+.menu-drawer {border-top: 1px solid #eee; padding-bottom: 8px}
 .list-drawer {padding-top: 8px}
 .list-drawer li {height: 48px;}
 .xin-drawer ul.list-drawer li i {padding: 0;float: right;font-style: inherit;max-width: 21px;width: 21px;text-align: center;font-size: 0.9em;color: #fff;background-color: #aaa;border-radius: 50%;display: table;}
 /*end drawer*/
 
 /*form*/
-select,
-input[type=text], input[type=password], input[type=email], input[type=url], input[type=time], input[type=date], input[type=datetime-local], input[type=tel], input[type=number], input[type=search], textarea.textarea{
+.xinForm select,
+.xinForm input[type=text], .xinForm input[type=password], .xinForm input[type=email], .xinForm input[type=url], input[type=time], .xinForm input[type=date], .xinForm input[type=datetime-local], .xinForm input[type=tel], .xinForm input[type=number], .xinForm input[type=search], .xinForm textarea.textarea{
   -webkit-border-radius: inherit;
   background-color: transparent;
   border: none;
@@ -49,20 +49,20 @@ input[type=text], input[type=password], input[type=email], input[type=url], inpu
   -ms-transition: 0.3s;
   transition: 0.3s;
 }
-label {color: #9e9e9e; font-size: 0.8em}
-textarea.textarea {padding: 24px 0}
-input:focus, textarea:focus {border-bottom: 1px solid #26a69a; box-shadow: 0 1px 0 0 #26a69a}
-.input-field textarea:focus + label,
-.input-field input:focus + label {
+.xinForm label {color: #444; font-size: 0.8em}
+.xinForm textarea.textarea {padding: 24px 0}
+.xinForm input:focus, .xinForm textarea:focus {border-bottom: 1px solid #26a69a; box-shadow: 0 1px 0 0 #26a69a}
+.xinForm .input-field textarea:focus + label,
+.xinForm .input-field input:focus + label {
   color: #26a69a; 
   font-size: 0.8em;
   transform: translateY(-140%)
 }
-.input-field {
+.xinForm .input-field {
   position: relative;
   margin-top: 1em;
 }
-.input-field label {
+.xinForm .input-field label {
   color: #9e9e9e;
   position: absolute;
   top: 0.8em;
@@ -74,11 +74,118 @@ input:focus, textarea:focus {border-bottom: 1px solid #26a69a; box-shadow: 0 1px
   -ms-transition: 0.2s ease-out;
   transition: 0.2s ease-out;
 }
-.input-field textarea.active,
-.input-field label.active {
+.xinForm .input-field textarea.active,
+.xinForm .input-field label.active {
   transform: translateY(-140%);
   font-size: 0.8em;
+  color: #444;
 }
+
+/* select option */
+.xinForm .input-checkbox label,
+.xinForm .radio-button label {margin:8px 0}
+.xinForm [type="checkbox"]:not(:checked), .xinForm [type="checkbox"]:checked,
+.xinForm [type="radio"]:not(:checked), .xinForm [type="radio"]:checked {
+  position: absolute;
+  left: -9999px;
+  visibility: hidden;
+}
+.xinForm [type="radio"]:not(:checked) + label:before {
+  border-radius: 50%;
+  border: 2px solid #5a5a5a;
+}
+.xinForm [type="radio"] + label:before, .xinForm [type="radio"] + label:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -1px;
+  margin: 4px;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  -webkit-transition: .28s ease;
+  -moz-transition: .28s ease;
+  -o-transition: .28s ease;
+  -ms-transition: .28s ease;
+  transition: .28s ease;
+}
+.xinForm [type="checkbox"] + label,
+.xinForm [type="radio"]:not(:checked) + label, .xinForm [type="radio"]:checked + label {
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  line-height: 25px;
+  font-size: 0.8em;
+  -webkit-transition: .28s ease;
+  -moz-transition: .28s ease;
+  -o-transition: .28s ease;
+  -ms-transition: .28s ease;
+  transition: .28s ease;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+}
+.xinForm [type="radio"]:checked + label:before {
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+.xinForm [type="radio"]:checked + label:after {
+  border-radius: 50%;
+  border: 2px solid #26a69a; 
+  background-color: #26a69a;
+  z-index: 0;
+  -webkit-transform: scale(1.02);
+  -moz-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  -o-transform: scale(1.02);
+  transform: scale(1.02);
+}
+.xinForm [type="radio"]:disabled:not(:checked) + label:before, .xinForm [type="radio"]:disabled:checked + label:before {
+  background-color: transparent;
+  border-color: rgba(0, 0, 0, 0.26);
+}
+.xinForm [type="checkbox"] + label:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 5px;
+  width: 16px;
+  height: 16px;
+  z-index: 0;
+  border: 2px solid #5a5a5a;
+  border-radius: 1px;
+  margin-top: 2px;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2s;
+  -ms-transition: 0.2s;
+  transition: 0.2s;
+}
+.xinForm [type="checkbox"]:checked + label:before {
+  top: -4px;
+  left: 0px;
+  width: 8px;
+  height: 18px;
+  border-top: 2px solid transparent;
+  border-left: 2px solid transparent;
+  border-right: 2px solid #26a69a;
+  border-bottom: 2px solid #26a69a;
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+  transform: rotate(40deg);
+  -webkit-backface-visibility: hidden;
+  -webkit-transform-origin: 100% 100%;
+  -moz-transform-origin: 100% 100%;
+  -ms-transform-origin: 100% 100%;
+  -o-transform-origin: 100% 100%;
+  transform-origin: 100% 100%;
+}
+
 
 /* select option */
 .input-checkbox label,
