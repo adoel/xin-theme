@@ -382,6 +382,7 @@ a.login {display: table; margin: 0 auto}
 ul.listing .thumb-img {width: 46px;height: 46px;background-size: cover;background-repeat: no-repeat;float: left;background-position: center;border-radius: 50%;margin-right: 16px;}
 ul.listing li {list-style: none; clear: both; padding: 10px 0;}
 ul.listing li .title {margin: 0; font-size: 1em; color: #333}
+.xin-list li a {padding: 0}
 /*end list View*/
 
 /*Preloader*/
