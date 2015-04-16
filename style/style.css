@@ -383,3 +383,32 @@ ul.listing .thumb-img {width: 46px;height: 46px;background-size: cover;backgroun
 ul.listing li {list-style: none; clear: both; padding: 16px 0;}
 ul.listing li .title {margin: 0; font-size: 1em; color: #333}
 /*end list View*/
+
+/*Preloader*/
+
+/*determinate*/
+.progress {
+  position: relative;
+  height: 4px;
+  display: block;
+  width: 100%;
+  background-color: #acece6;
+  border-radius: 2px;
+  margin: 0.5rem 0 1rem 0;
+  overflow: hidden;
+}
+.progress .determinate {
+  position: absolute;
+  background-color: inherit;
+  top: 0;
+  bottom: 0;
+  background-color: #26a69a;
+  -webkit-transition: width .3s linear;
+  -moz-transition: width .3s linear;
+  -o-transition: width .3s linear;
+  -ms-transition: width .3s linear;
+  transition: width .3s linear;
+}
+
+/* end Preloader*/
+
