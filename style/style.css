@@ -190,16 +190,17 @@ div.img-user {width: 60px;height: 60px;display: block;border-radius: 50%;margin:
 /* select option */
 .input-checkbox label,
 .radio-button label {margin:8px 0}
-input[type="checkbox"]:not(:checked), input[type="checkbox"]:checked,
-[type="radio"]:not(:checked), [type="radio"]:checked {
+.xinForm input[type="checkbox"]:not(:checked), .xinForm input[type="checkbox"]:checked,
+.xinForm  [type="radio"]:not(:checked), .xinForm  [type="radio"]:checked {
   position: absolute;
   left: -9999px;
   visibility: hidden;
 }
-input[type="radio"]:not(:checked) + label:before {
+.xinForm  input[type="radio"]:not(:checked) + label:before {
   border-radius: 50%;
   border: 2px solid #5a5a5a;
-}input[type="radio"] + label:before, input[type="radio"] + label:after {
+}
+.xinForm input[type="radio"] + label:before, .xinForm input[type="radio"] + label:after {
   content: '';
   position: absolute;
   left: 0;
@@ -214,8 +215,9 @@ input[type="radio"]:not(:checked) + label:before {
   -ms-transition: .28s ease;
   transition: .28s ease;
 }
-input[type="checkbox"] + label,
-input[type="radio"]:not(:checked) + label, input[type="radio"]:checked + label {
+.xinForm input[type="checkbox"] + label,
+.xinForm input[type="radio"]:not(:checked) + label, 
+.xinForm input[type="radio"]:checked + label {
   position: relative;
   padding-left: 35px;
   cursor: pointer;
@@ -233,11 +235,11 @@ input[type="radio"]:not(:checked) + label, input[type="radio"]:checked + label {
   -khtml-user-select: none;
   -ms-user-select: none;
 }
-input[type="radio"]:checked + label:before {
+.xinForm input[type="radio"]:checked + label:before {
   border-radius: 50%;
   border: 2px solid transparent;
 }
-input[type="radio"]:checked + label:after {
+.xinForm input[type="radio"]:checked + label:after {
   border-radius: 50%;
   border: 2px solid #26a69a; 
   background-color: #26a69a;
@@ -248,11 +250,12 @@ input[type="radio"]:checked + label:after {
   -o-transform: scale(1.02);
   transform: scale(1.02);
 }
-input[type="radio"]:disabled:not(:checked) + label:before, input[type="radio"]:disabled:checked + label:before {
+.xinForm input[type="radio"]:disabled:not(:checked) + label:before, 
+.xinForm input[type="radio"]:disabled:checked + label:before {
   background-color: transparent;
   border-color: rgba(0, 0, 0, 0.26);
 }
-input[type="checkbox"] + label:before {
+.xinForm input[type="checkbox"] + label:before {
   content: '';
   position: absolute;
   top: 0;
@@ -269,7 +272,7 @@ input[type="checkbox"] + label:before {
   -ms-transition: 0.2s;
   transition: 0.2s;
 }
-input[type="checkbox"]:checked + label:before {
+.xinForm input[type="checkbox"]:checked + label:before {
   top: -4px;
   left: 0px;
   width: 8px;
